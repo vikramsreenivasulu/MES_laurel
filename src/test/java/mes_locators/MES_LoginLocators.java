@@ -25,5 +25,8 @@ public class MES_LoginLocators {
 		@FindBy(id="loginForm:submit")
 		public WebElement LoginButton;
 		
+		@FindBy()
+		public WebElement VerifyToastedMsg;
+		
 	}
 }
