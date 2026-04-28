@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-28T15:50:17 IST" name="Default suite" finished-at="2026-04-28T15:50:17 IST" duration-ms="190">
+    <groups>
+    </groups>
+    <test started-at="2026-04-28T15:50:17 IST" name="Default test" finished-at="2026-04-28T15:50:17 IST" duration-ms="190">
+      <class name="mes_testcases.MES_LoginTestCases">
+        <test-method is-config="true" signature="BeforeSuit()[pri:0, instance:mes_testcases.MES_LoginTestCases@3cd3e762]" started-at="2026-04-28T15:50:14 IST" name="BeforeSuit" finished-at="2026-04-28T15:50:17 IST" duration-ms="3084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuit -->
+        <test-method signature="ATTest()[pri:0, instance:mes_testcases.MES_LoginTestCases@3cd3e762]" started-at="2026-04-28T15:50:17 IST" name="ATTest" finished-at="2026-04-28T15:50:17 IST" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ATTest -->
+      </class> <!-- mes_testcases.MES_LoginTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
