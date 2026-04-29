@@ -4,22 +4,23 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.Test;
 
 
 public class BaseClass {
 
-	public static String url = "http://10.106.100.239:9091/MES/PM_Elog/";
+	public static String url = "http://10.106.100.177:8081/MES/PM/login.jsf#";
 	public static WebDriver driver;
 	
-	@Test()
+	
 	public static void startdriver() {
 		
 		driver = new ChromeDriver(getChromeOptions()); 
-		driver.get("http://10.106.100.177:8081/MES/PM/login.jsf#");
+		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
@@ -49,5 +50,14 @@ public class BaseClass {
         return options; 
     }
 
-	
+	public static void selectDropdown(WebElement dropdown, String value) throws InterruptedException {
+	    dropdown.click();
+	    Thread.sleep(10);
+	    
+	    WebElement element = driver.findElement(By.xpath("//ul/li[normalize-space()='" + value + "']"));
+	    element.click();
+	    Thread.sleep(10);
+	    dropdown.click();
 	}
+	
+}
