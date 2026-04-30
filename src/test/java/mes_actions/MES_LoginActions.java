@@ -85,6 +85,13 @@ public class MES_LoginActions {
 				mes_loginlocators.pm_login.Discription.sendKeys(Discri);
 			}
 			
+			public void ClickResetButton() {
+				mes_loginlocators.pm_login.ResetButton.click();
+			}
+			
+			public void ClickBacktoLogin() {
+				mes_loginlocators.pm_login.BacktoLoginButton.click();
+			}
 		}//InsideLoginIssue
 		
 		

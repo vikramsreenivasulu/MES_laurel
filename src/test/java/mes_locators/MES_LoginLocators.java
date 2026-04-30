@@ -51,6 +51,11 @@ public class MES_LoginLocators {
 		@FindBy(xpath="//table[@id='loginIssueForm:part1']/tbody[1]/tr[5]/td[3]/textarea[1]")
 		public WebElement Discription;
 		
+		@FindBy(xpath="(//span[@class='ui-button-text ui-c'])[2]")
+		public WebElement ResetButton;
+		
+		@FindBy(xpath="//span[normalize-space(text())='Back To Login']")
+		public WebElement BacktoLoginButton;
 	}//PM_Login
 	
 	
