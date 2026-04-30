@@ -19,11 +19,12 @@ public class Verify {
 	// Method to verify equality
 	public static void verifyEquals(String actual, String expected) {
 		if (actual.equals(expected)) {
+			Report.pass("Expected: " +expected +" || "+"Actual: "+actual);
 			System.out.println(" Passed");
 		} else {
+			Report.fail("Expected: " +expected +" || "+"Actual: "+actual);
 			System.out.println(" Failed");
-			System.out.println("Actual: " + actual);
-			System.out.println("Expected: " + expected);
+	
 		}
 
 		softAssert.assertEquals(actual, expected);

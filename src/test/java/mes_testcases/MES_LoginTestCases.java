@@ -25,12 +25,15 @@ public class MES_LoginTestCases {
 	@Test()
 	public void ATTest() throws InterruptedException {
 		Report.createTest("Laurel MES TestCase");
+		Report.Createnode("Login Page");
 		Report.logInfo("Test started");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
 		mes_loginactions.mesloginmethods.VerifyToastedMsg("UserID Required!","Password Required!");
 		Report.logInfo("Verified iser name & password");
 		mes_loginactions.mesloginmethods.PM("Plant Maintenance");
 		Report.pass("verify Plant Maintenance");
+		
+		Report.Createnode("Login Issue");
 		mes_loginactions.mesloginmethods.ClickLoginIssue();
 		mes_loginactions.mesloginmethods.insideloginissue.UserName("Auto_VS");
 		mes_loginactions.mesloginmethods.insideloginissue.FirstName("Auto");

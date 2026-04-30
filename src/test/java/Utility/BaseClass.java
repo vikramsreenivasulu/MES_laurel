@@ -52,11 +52,11 @@ public class BaseClass {
 
 	public static void selectDropdown(WebElement dropdown, String value) throws InterruptedException {
 	    dropdown.click();
-	    Thread.sleep(10);
+	    Thread.sleep(1000);
 	    
 	    WebElement element = driver.findElement(By.xpath("//ul/li[normalize-space()='" + value + "']"));
 	    element.click();
-	    Thread.sleep(10);
+	    Thread.sleep(1000);
 	}
 	public static  void StopDriver() {
 		

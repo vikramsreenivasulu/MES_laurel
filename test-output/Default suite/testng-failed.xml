@@ -7,6 +7,7 @@
         <methods>
           <include name="ATTest"/>
           <include name="BeforeSuit"/>
+          <include name="AfterSuite"/>
         </methods>
       </class> <!-- mes_testcases.MES_LoginTestCases -->
     </classes>

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--328433767\testng-customsuite.xml</span>
+                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-50743270\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--328433767\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse-50743270\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;mes_testcases.MES_LoginTestCases&quot;/&gt;
+      &lt;class name=&quot;mes_testcases.MES_LoginTestCases&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;ATTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mes_testcases.MES_LoginTestCases --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ATTest')
 data.setCell(0, 2, 'mes_testcases.MES_LoginTestCases')
-data.setCell(0, 3, 3192);
+data.setCell(0, 3, 6587);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,11 +231,11 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">ATTest</span>
-                <span class="method-start">4872 ms</span>
+                <span class="method-start">5511 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">AfterSuite</span>
-                <span class="method-start">8162 ms</span>
+                <span class="method-start">12148 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
