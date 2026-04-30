@@ -57,7 +57,14 @@ public class BaseClass {
 	    WebElement element = driver.findElement(By.xpath("//ul/li[normalize-space()='" + value + "']"));
 	    element.click();
 	    Thread.sleep(10);
-	    dropdown.click();
+	}
+	public static  void StopDriver() {
+		
+		driver.quit();
+	}
+	
+	public  static void  Sleep() throws InterruptedException {
+		Thread.sleep(3000);
 	}
 	
 }

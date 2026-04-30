@@ -19,9 +19,9 @@ public class Verify {
 	// Method to verify equality
 	public static void verifyEquals(String actual, String expected) {
 		if (actual.equals(expected)) {
-			System.out.println("Verification Passed");
+			System.out.println(" Passed");
 		} else {
-			System.out.println("Verification Failed");
+			System.out.println(" Failed");
 			System.out.println("Actual: " + actual);
 			System.out.println("Expected: " + expected);
 		}

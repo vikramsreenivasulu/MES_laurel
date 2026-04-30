@@ -76,6 +76,8 @@ public class MES_LoginActions {
 			}
 			
 			public void ClickIssueType(String issuetype) throws InterruptedException {
+				
+				mes_loginlocators.pm_login.IssueType.click();
 				BaseClass.selectDropdown(mes_loginlocators.pm_login.IssueType, issuetype);
 			}
 			
