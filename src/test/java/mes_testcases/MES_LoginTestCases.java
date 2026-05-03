@@ -24,7 +24,7 @@ public class MES_LoginTestCases {
 	
 	@Test()
 	public void ATTest() throws InterruptedException {
-		Report.createTest("Laurel MES TestCase");
+		Report.createTest("🧪 Laurel MES TestCase");
 		
 		//here node is declared
 		Report.Createnode("Login Page");
@@ -48,8 +48,11 @@ public class MES_LoginTestCases {
 		Report.logInfo("After reset the entered values");
 		mes_loginactions.mesloginmethods.insideloginissue.ClickBacktoLogin();
 		Report.logInfo("Back to log in page");
-		
-		
+		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
+		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
+		mes_loginactions.mesloginmethods.ClickLoginButton();
+		BaseClass.Sleep();
+		Report.logInfo("log in page entered Successfully");
 		
 		
 		Report.pass("All Test Cases Pass");

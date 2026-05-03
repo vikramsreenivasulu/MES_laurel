@@ -56,6 +56,14 @@ public class MES_LoginLocators {
 		
 		@FindBy(xpath="//span[normalize-space(text())='Back To Login']")
 		public WebElement BacktoLoginButton;
+		
+		@FindBy(id="loginForm:j_idt16")
+		public WebElement UserID;
+		
+		@FindBy(id="loginForm:j_idt18")
+		public WebElement UserPassword;
+		
+		
 	}//PM_Login
 	
 	

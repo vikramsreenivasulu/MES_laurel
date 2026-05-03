@@ -92,6 +92,18 @@ public class MES_LoginActions {
 			public void ClickBacktoLogin() {
 				mes_loginlocators.pm_login.BacktoLoginButton.click();
 			}
+			
+			public void UserID(String userid) {
+				mes_loginlocators.pm_login.UserID.sendKeys(userid);
+			}
+			
+			
+			public void UserPassword(String userpassword ) {
+				mes_loginlocators.pm_login.UserPassword.sendKeys(userpassword);
+			}
+			
+			
+			
 		}//InsideLoginIssue
 		
 		
