@@ -30,7 +30,7 @@ public class MES_LoginTestCases {
 		Report.Createnode("Login Page");
 		Report.logInfo("Test started");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
-		mes_loginactions.mesloginmethods.VerifyToastedMsg("UserID Required!","Password Required!");
+		mes_loginactions.mesloginmethods.VerifyToastedMsg("!UserID Required!","Password Required!");
 		Report.logInfo("Verified iser name & password");
 		mes_loginactions.mesloginmethods.PM("Plant Maintenance");
 		Report.pass("verify Plant Maintenance");
