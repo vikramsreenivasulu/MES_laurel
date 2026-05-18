@@ -2,6 +2,7 @@ package Utility;
 
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -66,5 +67,20 @@ public class BaseClass {
 	public  static void  Sleep() throws InterruptedException {
 		Thread.sleep(3000);
 	}
+	
+	
+	public static void Popupclick() {
+		List<WebElement> popup = driver.findElements(By.xpath("//button[text()='Yes']"));
+
+		if (popup.size() > 0) {
+
+		    popup.get(0).click();
+		    System.out.println("Popup handled");
+
+		} else {
+
+		    System.out.println("Popup not present");
+		}
+	}//Popupclick
 	
 }

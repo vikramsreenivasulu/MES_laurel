@@ -1,5 +1,7 @@
 package mes_testcases;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -27,16 +29,17 @@ public class MES_LoginTestCases {
 		Report.createTest("🧪 Laurel MES TestCase");
 		
 		//here node is declared
-		Report.Createnode("Login Page");
+		Report.createNode("Login Page");
 		Report.logInfo("Test started");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
-		mes_loginactions.mesloginmethods.VerifyToastedMsg("!UserID Required!","Password Required!");
-		Report.logInfo("Verified iser name & password");
+		mes_loginactions.mesloginmethods.VerifyToastedMsg("UserID Required!","Password Required!");
+		Report.pass("username & password verified successfull");
+		Report.logInfo("Verified user name & password");
 		mes_loginactions.mesloginmethods.PM("Plant Maintenance");
 		Report.pass("verify Plant Maintenance");
 		
 		//here node is declared
-		Report.Createnode("Login Issue");
+		Report.createNode("Login Issue");
 		mes_loginactions.mesloginmethods.ClickLoginIssue();
 		mes_loginactions.mesloginmethods.insideloginissue.UserName("Auto_VS");
 		mes_loginactions.mesloginmethods.insideloginissue.FirstName("Auto");
@@ -52,6 +55,8 @@ public class MES_LoginTestCases {
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
 		BaseClass.Sleep();
+		BaseClass.Popupclick();
+		Report.pass("log in success");
 		Report.logInfo("log in page entered Successfully");
 		
 		
@@ -59,10 +64,19 @@ public class MES_LoginTestCases {
 		Verify.assertAll();
 	}	
 	
-	@AfterSuite()
-	public void AfterSuite() throws InterruptedException {
-		BaseClass.Sleep();
+	@AfterMethod()
+	public void AfterSuite(ITestResult result) {
+		Report.getResult(result);
 		BaseClass.StopDriver();
 		Report.flush();
 	}
+	
+//	@AfterSuite()
+//	public void AfterSuite() throws InterruptedException {
+//		//BaseClass.Sleep();
+//		BaseClass.StopDriver();
+//		Report.flush();
+//	}
+	
+	
 }

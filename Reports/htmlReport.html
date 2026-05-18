@@ -11,7 +11,7 @@
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css">body { font-family: 'Segoe UI', sans-serif; }.test-item.pass { background: linear-gradient(90deg, #1f4037, #99f2c9) !important; color:black !important; border-radius:10px; }.card { border-radius:12px !important; overflow:hidden; margin-bottom:15px; }.card-header { border-radius:12px !important; }.card-header:has(.pass-bg) { background: linear-gradient(90deg, #00b09b, #96c93d) !important; color:black !important; }.card-header:has(.fail-bg) { background: #f8a5a5 !important; color:black !important; }.event-row:hover { background-color: rgba(255,255,255,0.05); }.pass-bg { background-color: #28a745 !important; }.fail-bg { background-color: #dc3545 !important; }.info-bg { background-color: #17a2b8 !important; }img { border-radius:8px; border:1px solid #444; }</style></head><body class="spa -report dark">
+<style type="text/css">.card-header:has(.pass-bg) {border-left: 1px solid #00c853 !important;color: #ffffff !important;}.card-header:has(.fail-bg) {border-left: 1px solid #ff5252 !important;color: #ffffff !important;}.node-name {color: #ffffff !important;font-weight: 600 !important;}.test-name {color: #ffffff !important;}img {border-radius: 6px;border: 2px solid #d6d6d6;}</style></head><body class="spa -report dark">
   <div class="app">
     <div class="layout">
 <div class="header navbar">
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Laurel-MES</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 6, 2026 11:32:27 AM</span></a>
+<a href="#"><span class="badge badge-primary">May 18, 2026 12:25:20 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,7 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,38 +74,52 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">🧪 Laurel MES TestCase</p>
             <p class="text-sm">
-              <span>11:32:28 AM</span> / <span>00:00:12:924</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>12:25:21 PM</span> / <span>00:00:53:774</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">🧪 Laurel MES TestCase</h5>
-<span class='badge badge-success'>05.06.2026 11:32:28 AM</span>
-<span class='badge badge-danger'>05.06.2026 11:32:41 AM</span>
-<span class='badge badge-default'>00:00:12:924</span>
+<h5 class="test-status text-pass">🧪 Laurel MES TestCase</h5>
+<span class='badge badge-success'>05.18.2026 12:25:21 PM</span>
+<span class='badge badge-danger'>05.18.2026 12:26:15 PM</span>
+<span class='badge badge-default'>00:00:53:774</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>  <div class="mt-4">  <div class="accordion" role="tablist">
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:26:15 PM</td>
+        <td>
+          <span class='badge white-text green'><b>ATTest----> PASSED+_____________________+Ran on Local--->ATTest</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+  <div class="mt-4">  <div class="accordion" role="tablist">
       <div class="card">
         <div class="card-header">
           <div class="card-toolbar node-info">
             <ul class="list-inline d-none d-sm-block">
-              <li><span class="badge fail-bg log ">Fail</span></li>
-              <li><span class='badge badge-default'>30:02:963</span></li>
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li><span class='badge badge-default'>30:02:775</span></li>
               <li><span><i class="fa fa-paperclip"></i></span></li>
             </ul>
           </div>
@@ -115,92 +129,81 @@
             </div>
           </div>
         </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
             
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:28 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:25:22 PM</td>
         <td>
-          Login Page
+          <span style='color:#00bfff;'>Test started</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:28 AM</td>
-        <td>
-          Test started
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:29 AM</td>
+        <td>12:25:22 PM</td>
         <td>
           Screenshot
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\Test started_2026-05-06_11-32-28.png' src="..\Screenshots\Test started_2026-05-06_11-32-28.png">
-    
-    </div></div>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:32:29 AM</td>
-        <td>
-          Expected: !UserID Required! || Actual: UserID Required!
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:32:30 AM</td>
-        <td>
-          Failed Screenshot
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\failed_2026-05-06_11-32-29.png' src="..\Screenshots\failed_2026-05-06_11-32-29.png">
+<img data-featherlight='..\Screenshots\Test started_2026-05-18_12-25-21.png' src="..\Screenshots\Test started_2026-05-18_12-25-21.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:30 AM</td>
+        <td>12:25:23 PM</td>
         <td>
-          Expected: Password Required! || Actual: Password Required!
+          <span style='color:#90ee90;'>Expected: UserID Required! || Actual: UserID Required!</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:25:23 PM</td>
+        <td>
+          <span style='color:#90ee90;'>Expected: Password Required! || Actual: Password Required!</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:25:23 PM</td>
+        <td>
+          <span style='color:#90ee90;'>username & password verified successfull</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:30 AM</td>
+        <td>12:25:24 PM</td>
         <td>
-          Verified iser name & password
+          <span style='color:#00bfff;'>Verified user name & password</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:31 AM</td>
+        <td>12:25:24 PM</td>
         <td>
           Screenshot
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\Verified iser name & password_2026-05-06_11-32-30.png' src="..\Screenshots\Verified iser name & password_2026-05-06_11-32-30.png">
+<img data-featherlight='..\Screenshots\Verified user name & password_2026-05-18_12-25-23.png' src="..\Screenshots\Verified user name & password_2026-05-18_12-25-23.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:31 AM</td>
+        <td>12:25:24 PM</td>
         <td>
-          Expected: Plant Maintenance || Actual: Plant Maintenance
+          <span style='color:#90ee90;'>Expected: Plant Maintenance || Actual: Plant Maintenance</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:31 AM</td>
+        <td>12:25:24 PM</td>
         <td>
-          verify Plant Maintenance
+          <span style='color:#90ee90;'>verify Plant Maintenance</span>
         </td>
       </tr>
   </tbody>
@@ -213,7 +216,7 @@
           <div class="card-toolbar node-info">
             <ul class="list-inline d-none d-sm-block">
               <li><span class="badge pass-bg log ">Pass</span></li>
-              <li><span class='badge badge-default'>30:09:950</span></li>
+              <li><span class='badge badge-default'>30:50:972</span></li>
               <li><span><i class="fa fa-paperclip"></i></span></li>
             </ul>
           </div>
@@ -230,89 +233,89 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:31 AM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:25:28 PM</td>
         <td>
-          Login Issue
+          <span style='color:#00bfff;'>In the log in issue tab enter each and every value</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:34 AM</td>
-        <td>
-          In the log in issue tab enter each and every value
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:34 AM</td>
+        <td>12:25:28 PM</td>
         <td>
           Screenshot
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\In the log in issue tab enter each and every value_2026-05-06_11-32-34.png' src="..\Screenshots\In the log in issue tab enter each and every value_2026-05-06_11-32-34.png">
+<img data-featherlight='..\Screenshots\In the log in issue tab enter each and every value_2026-05-18_12-25-28.png' src="..\Screenshots\In the log in issue tab enter each and every value_2026-05-18_12-25-28.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:35 AM</td>
+        <td>12:25:29 PM</td>
         <td>
-          After reset the entered values
+          <span style='color:#00bfff;'>After reset the entered values</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:35 AM</td>
+        <td>12:25:29 PM</td>
         <td>
           Screenshot
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\After reset the entered values_2026-05-06_11-32-35.png' src="..\Screenshots\After reset the entered values_2026-05-06_11-32-35.png">
+<img data-featherlight='..\Screenshots\After reset the entered values_2026-05-18_12-25-29.png' src="..\Screenshots\After reset the entered values_2026-05-18_12-25-29.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:36 AM</td>
+        <td>12:25:31 PM</td>
         <td>
-          Back to log in page
+          <span style='color:#00bfff;'>Back to log in page</span>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:37 AM</td>
+        <td>12:25:31 PM</td>
         <td>
           Screenshot
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\Back to log in page_2026-05-06_11-32-36.png' src="..\Screenshots\Back to log in page_2026-05-06_11-32-36.png">
-    
-    </div></div>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:40 AM</td>
-        <td>
-          log in page entered Successfully
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:32:41 AM</td>
-        <td>
-          Screenshot
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='..\Screenshots\log in page entered Successfully_2026-05-06_11-32-40.png' src="..\Screenshots\log in page entered Successfully_2026-05-06_11-32-40.png">
+<img data-featherlight='..\Screenshots\Back to log in page_2026-05-18_12-25-30.png' src="..\Screenshots\Back to log in page_2026-05-18_12-25-30.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:32:41 AM</td>
+        <td>12:26:14 PM</td>
         <td>
-          All Test Cases Pass
+          <span style='color:#90ee90;'>log in success</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:15 PM</td>
+        <td>
+          <span style='color:#00bfff;'>log in page entered Successfully</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:26:15 PM</td>
+        <td>
+          Screenshot
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='..\Screenshots\log in page entered Successfully_2026-05-18_12-26-14.png' src="..\Screenshots\log in page entered Successfully_2026-05-18_12-26-14.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:26:15 PM</td>
+        <td>
+          <span style='color:#90ee90;'>All Test Cases Pass</span>
         </td>
       </tr>
   </tbody>
@@ -338,25 +341,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 6, 2026 11:32:27 AM</h3>
+<h3>May 18, 2026 12:25:20 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 6, 2026 11:32:44 AM</h3>
+<h3>May 18, 2026 12:26:15 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -372,12 +375,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> tests passed
+<div><small data-tooltip='100%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -395,9 +398,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>1</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>2</b> steps passed</small></div>
 <div>
-<small data-tooltip='50%'><b>1</b> steps failed,
+<small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -415,9 +418,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='30%'><b>6</b> events passed</small></div>
+<div><small data-tooltip='40%'><b>8</b> events passed</small></div>
 <div>
-<small data-tooltip='10%'><b>2</b> events failed,
+<small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>12</b> others
 </small>
 </div>
@@ -434,7 +437,7 @@
 </div></div>
 <script>
 var timeline = {
-"🧪 Laurel MES TestCase":12.924
+"🧪 Laurel MES TestCase":53.774
 };
 </script>
 <div class="row">
@@ -465,13 +468,13 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
-failChild: 1,
+passChild: 2,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
@@ -482,8 +485,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 6,
-failEvents: 2,
+passEvents: 8,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 12
