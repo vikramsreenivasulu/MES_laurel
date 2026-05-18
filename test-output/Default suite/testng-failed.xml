@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mes_testcases.MES_LoginTestCases">
+      <class name="mes_testcases.PlantInformation_MESTestcases">
         <methods>
-          <include name="ATTest"/>
+          <include name="Aftersuit"/>
           <include name="BeforeSuit"/>
-          <include name="AfterSuite"/>
+          <include name="Attest"/>
         </methods>
-      </class> <!-- mes_testcases.MES_LoginTestCases -->
+      </class> <!-- mes_testcases.PlantInformation_MESTestcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

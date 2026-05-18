@@ -27,6 +27,9 @@ public class MES_LoginLocators {
 		@FindBy(id="loginForm:submit")
 		public WebElement LoginButton;
 		
+		@FindBy(xpath="(//a[@class='menulink Animated05'])[3]")
+		public WebElement LogoutButton;
+		
 		@FindBy(xpath="//span[@class='ui-growl-title']")
 		public List<WebElement> VerifyToastedMsg;
 		

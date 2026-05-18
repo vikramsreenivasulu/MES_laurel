@@ -2,7 +2,6 @@ package mes_testcases;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -24,7 +23,7 @@ public class MES_LoginTestCases {
 		mes_loginactions = new MES_LoginActions();
 	}
 	
-	@Test()
+	@Test(priority = 1) 
 	public void ATTest() throws InterruptedException {
 		Report.createTest("🧪 Laurel MES TestCase");
 		

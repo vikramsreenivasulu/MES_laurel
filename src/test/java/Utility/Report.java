@@ -22,63 +22,51 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Report {
 
-public static ExtentSparkReporter extentSparkReporter;
-	
+	public static ExtentSparkReporter extentSparkReporter;
+
 	public static ExtentReports extentReports;
-	
+
 	public static ExtentTest extentTest;
-	
-	public static  ExtentTest node;
+
+	public static ExtentTest node;
+
 	public static void startReport() {
 
 		extentSparkReporter = new ExtentSparkReporter(
 				"C:\\Users\\vikram.sreenivasulu\\eclipse-workspace\\laurel-mes\\Reports\\htmlReport.html");
-		
+
 		extentSparkReporter.config().setDocumentTitle("Laurel-MES Automation Report");
 		extentSparkReporter.config().setTheme(Theme.DARK);
 		extentSparkReporter.config().setReportName("Laurel-MES");
 		extentSparkReporter.config().setEncoding("utf-8");
-		
+
 		extentSparkReporter.config().setCss(
 
-			    /* ===== PASS NODE ===== */
-			    ".card-header:has(.pass-bg) {" +
-			    "border-left: 1px solid #00c853 !important;" +
-			    "color: #ffffff !important;" +
-			    "}" +
+				/* ===== PASS NODE ===== */
+				".card-header:has(.pass-bg) {" + "border-left: 1px solid #00c853 !important;"
+						+ "color: #ffffff !important;" + "}" +
 
-			    /* ===== FAIL NODE ===== */
-			    ".card-header:has(.fail-bg) {" +
-			    "border-left: 1px solid #ff5252 !important;" +
-			    "color: #ffffff !important;" +
-			    "}" +
+						/* ===== FAIL NODE ===== */
+						".card-header:has(.fail-bg) {" + "border-left: 1px solid #ff5252 !important;"
+						+ "color: #ffffff !important;" + "}" +
 
-			    /* ===== NODE TEXT ===== */
-			    ".node-name {" +
-			    "color: #ffffff !important;" +
-			    "font-weight: 600 !important;" +
-			    "}" +
+						/* ===== NODE TEXT ===== */
+						".node-name {" + "color: #ffffff !important;" + "font-weight: 600 !important;" + "}" +
 
-			    /* ===== TEST NAME ===== */
-			    ".test-name {" +
-			    "color: #ffffff !important;" +
-			    "}" +
+						/* ===== TEST NAME ===== */
+						".test-name {" + "color: #ffffff !important;" + "}" +
 
-			    /* ===== SCREENSHOT ===== */
-			    "img {" +
-			    "border-radius: 6px;" +
-			    "border: 2px solid #d6d6d6;" +
-			    "}"
-			);
-		  
-		extentReports= new ExtentReports();
+						/* ===== SCREENSHOT ===== */
+						"img {" + "border-radius: 6px;" + "border: 2px solid #d6d6d6;" + "}");
+
+		extentReports = new ExtentReports();
 		extentReports.setSystemInfo("Name", "Vikram");
 		extentReports.setSystemInfo("Team", "Automation Team");
 		extentReports.setSystemInfo("System", "CPLBNGLPT103");
 		extentReports.attachReporter(extentSparkReporter);
 
 	}
-	
+
 	public static void createTest(String testName) {
 		extentTest = extentReports.createTest(testName);
 
@@ -132,7 +120,7 @@ public static ExtentSparkReporter extentSparkReporter;
 		node.fail("Screenshot on failure:",
 				MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build());
 	}
-	
+
 	public static void screenshotBase64InTest() {
 		String base64Screenshot = ((TakesScreenshot) BaseClass.driver).getScreenshotAs(OutputType.BASE64);
 		extentTest.fail("Screenshot on failure:",
@@ -185,19 +173,19 @@ public static ExtentSparkReporter extentSparkReporter;
 		} else if (status == ITestResult.SKIP) {
 
 			String methodName = result.getMethod().getMethodName();
-			extentTest.log(Status.SKIP,
-					MarkupHelper.createLabel(
-							"<b>" + methodName+ "----> SKIPPED"+ "+_____________________+Ran on Local--->"+ methodName,ExtentColor.ORANGE));
+			extentTest.log(Status.SKIP, MarkupHelper.createLabel(
+					"<b>" + methodName + "----> SKIPPED" + "+_____________________+Ran on Local--->" + methodName,
+					ExtentColor.ORANGE));
 
 			extentTest.skip(result.getThrowable());
 
 		} else if (status == ITestResult.SUCCESS) {
 
 			String methodName = result.getMethod().getMethodName();
-			extentTest.log(Status.PASS,
-					MarkupHelper.createLabel(
-							"<b>" + methodName+ "----> PASSED"+ "+_____________________+Ran on Local--->"+ methodName,ExtentColor.GREEN));
+			extentTest.log(Status.PASS, MarkupHelper.createLabel(
+					"<b>" + methodName + "----> PASSED" + "+_____________________+Ran on Local--->" + methodName,
+					ExtentColor.GREEN));
 		}
 	}
-	
+
 }

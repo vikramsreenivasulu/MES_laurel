@@ -1,8 +1,5 @@
 package mes_actions;
 
-import org.openqa.selenium.Dimension;
-import org.testng.Assert;
-
 import Utility.BaseClass;
 import Utility.Verify;
 import mes_locators.MES_LoginLocators;
@@ -31,6 +28,17 @@ public class MES_LoginActions {
 			mes_loginlocators.pm_login.LoginButton.click();
 		}
 		
+		public void ClickLogOutButton() {
+			mes_loginlocators.pm_login.LogoutButton.click();
+		}
+		
+		public void verifyLoginPageisShown(String expectedUrl) {
+			
+			//String expectedUrl = "http://10.106.100.177:8081/MES/PM/login#";
+			String actualUrl = BaseClass.driver.getCurrentUrl();
+		
+			Verify.verifyEquals(actualUrl, expectedUrl);
+		}
 		
 		public void VerifyToastedMsg(String textOne,String textTwo) {
 			String text1 = mes_loginlocators.pm_login.VerifyToastedMsg.get(0).getText();
@@ -101,6 +109,9 @@ public class MES_LoginActions {
 			public void UserPassword(String userpassword ) {
 				mes_loginlocators.pm_login.UserPassword.sendKeys(userpassword);
 			}
+
+		
+
 			
 			
 			
