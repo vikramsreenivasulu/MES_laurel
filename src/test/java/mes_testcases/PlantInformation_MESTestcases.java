@@ -29,10 +29,11 @@ public class PlantInformation_MESTestcases {
 	public void Attest() throws InterruptedException {
 
 		Report.createTest("🧪 Laurel PM");
-		Report.createNode("Login Page abc");
+		Report.createNode("Login Page ");
 		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
+
 
 		plantinformation_mesactions.plantinformationmethods.menu.verifyPlandDetailsBreadcrumbShown();
 		Report.logInfo("Verified Bread Crumb");
@@ -41,17 +42,31 @@ public class PlantInformation_MESTestcases {
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantDetails();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickAddPlantDetails();
 
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantName("VS_TATA ELECTRO");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCode("TE-BLR-01");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCity("Bangalore");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantState("Karnataka");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPinCode("560100");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPhone("+91 9123456780");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantFax("80 4567 8901");
+		BaseClass.Sleep();
+//		Report.logInfo("plant details created");
+		
+		
+		
+		
 //		mes_loginactions.mesloginmethods.ClickLogOutButton();
 //		mes_loginactions.mesloginmethods.verifyLoginPageisShown("http://10.106.100.177:8081/MES/PM/pmplantDetails");
 //		Report.logInfo("Verified Login URL ");
 
 	}
 
-//	@AfterMethod()
-//	public void Aftersuit(ITestResult result) {
-//		BaseClass.StopDriver();
-//		Report.getResult(result);
-//		Report.flush();
-//	}
+	@AfterMethod()
+	public void Aftersuit(ITestResult result) {
+		BaseClass.StopDriver();
+		Report.getResult(result);
+		Report.flush();
+	}
 
 }// PlantInformation_MESTestcases

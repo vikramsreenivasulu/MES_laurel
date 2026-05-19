@@ -1,5 +1,12 @@
 package mes_actions;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import Utility.BaseClass;
 import Utility.Verify;
 import mes_locators.MES_LoginLocators;
@@ -28,9 +35,25 @@ public class MES_LoginActions {
 			mes_loginlocators.pm_login.LoginButton.click();
 		}
 		
-		public void ClickLogOutButton() {
+		public void ClickLogOutButton() throws InterruptedException {
 			mes_loginlocators.pm_login.LogoutButton.click();
+			
 		}
+			
+//			public void ClickLogOutButton() {
+//
+//			    WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
+//
+//			    // Wait until overlay disappears
+//			    wait.until(ExpectedConditions.invisibilityOf(mes_loginlocators.pm_login.LogoutButton));
+//
+//			    WebElement logout = wait.until(
+//			            ExpectedConditions.elementToBeClickable(
+//			                    By.xpath("(//a[@class='menulink Animated05'])[3]")));
+//
+//			    logout.click();
+//			}
+		
 		
 		public void verifyLoginPageisShown(String expectedUrl) {
 			

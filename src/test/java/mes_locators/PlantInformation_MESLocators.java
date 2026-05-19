@@ -33,7 +33,10 @@ public class PlantInformation_MESLocators {
 
 	public class PlantInformation {
 
+		public AddPlantDetails addplantdetails;
 		public PlantInformation() {
+			
+			addplantdetails = new AddPlantDetails();
 			PageFactory.initElements(BaseClass.driver, this);
 		}
 
@@ -44,8 +47,50 @@ public class PlantInformation_MESLocators {
 		public WebElement plantDetails;
 
 		@FindBy(xpath = "//span[normalize-space(text())='Add Plant Info']")
-		public WebElement AddplantDetails;
+		public WebElement Clickaddplantdetails;
 
-	}
+		public class AddPlantDetails{
+			
+			public AddPlantDetails() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[1]/td[2]/input[1]")
+			public WebElement PlantName;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[2]/td[2]/input[1]")
+			public WebElement PlantCode;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[3]/td[2]/input[1]")
+			public WebElement PlantAddress;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[5]/td[2]/input[1]")
+			public WebElement PlantCity;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[5]/td[4]/input[1]")
+			public WebElement PlantState;
+			
+			@FindBy(xpath="")
+			public WebElement PlantCountry;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[6]/td[2]/input[1]")
+			public WebElement PlantPinCode;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[6]/td[4]/input[1]")
+			public WebElement PlantPhone;
+			
+			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[6]/td[6]/input[1]")
+			public WebElement PlantFax;
+			
+		}//AddPlantDetails
+		
+		
+		
+		
+		
+	}//PlantInformation
 
+	
+	
+	
 }// PlantInformation_MESLocators

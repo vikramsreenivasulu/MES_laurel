@@ -54,7 +54,7 @@ public class MES_LoginTestCases {
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
 		BaseClass.Sleep();
-		BaseClass.Popupclick();
+		//BaseClass.Popupclick();
 		Report.pass("log in success");
 		Report.logInfo("log in page entered Successfully");
 		
