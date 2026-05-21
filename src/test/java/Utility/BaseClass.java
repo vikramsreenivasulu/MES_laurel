@@ -51,6 +51,14 @@ public class BaseClass {
         return options; 
     }
 
+	public static void Dropdown(WebElement dropdown, String value) throws InterruptedException {
+	    dropdown.click();
+	    Thread.sleep(1000);
+	    WebElement element = driver.findElement(By.xpath("(//li[@data-label='" + value + "'])[2]"));   //(//li[@data-label='India'])[2]
+	    element.click();
+	}
+	
+	
 	public static void selectDropdown(WebElement dropdown, String value) throws InterruptedException {
 	    dropdown.click();
 	    Thread.sleep(1000);

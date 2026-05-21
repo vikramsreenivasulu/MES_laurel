@@ -70,7 +70,7 @@ public class PlantInformation_MESLocators {
 			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[5]/td[4]/input[1]")
 			public WebElement PlantState;
 			
-			@FindBy(xpath="")
+			@FindBy(xpath="(//div[contains(@class,'ui-selectonemenu ui-widget')])[2]")
 			public WebElement PlantCountry;
 			
 			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[6]/td[2]/input[1]")

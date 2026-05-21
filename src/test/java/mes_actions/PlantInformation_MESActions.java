@@ -111,6 +111,9 @@ public class PlantInformation_MESActions {
 					plantName.sendKeys(PlantState);
 				}
 				
+				public void PlantCountry(String Country) throws InterruptedException {
+					BaseClass.Dropdown(plantInformation_meslocators.plantinformation.addplantdetails.PlantCountry, Country);
+				}
 				public void PlantPinCode(String PlantPinCode) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 

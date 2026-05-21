@@ -47,6 +47,7 @@ public class PlantInformation_MESTestcases {
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCity("Bangalore");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantState("Karnataka");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCountry("India");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPinCode("560100");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPhone("+91 9123456780");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantFax("80 4567 8901");
