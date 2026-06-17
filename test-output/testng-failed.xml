@@ -6,8 +6,8 @@
       <class name="mes_testcases.PlantInformation_MESTestcases">
         <methods>
           <include name="Aftersuit"/>
+          <include name="AttestBlockDetails"/>
           <include name="BeforeSuit"/>
-          <include name="Attest"/>
         </methods>
       </class> <!-- mes_testcases.PlantInformation_MESTestcases -->
     </classes>

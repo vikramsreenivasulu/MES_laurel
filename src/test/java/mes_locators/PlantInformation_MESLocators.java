@@ -12,11 +12,14 @@ public class PlantInformation_MESLocators {
 
 	public Menu menu;
 	public PlantInformation plantinformation;
+	
+	public BlockInformation blockinformation;
 
 	public PlantInformation_MESLocators() {
 
 		menu = new Menu();
 		plantinformation = new PlantInformation();
+		blockinformation = new BlockInformation();
 	}
 
 	public class Menu {
@@ -100,7 +103,16 @@ public class PlantInformation_MESLocators {
 		
 	}//PlantInformation
 
-	
+	public class BlockInformation{
+		
+		public BlockInformation() {
+			PageFactory.initElements(BaseClass.driver, this);
+		}
+		
+		@FindBy(xpath="//a[normalize-space(text())='Block Details']")
+		public WebElement PlantBlockTab;
+		
+	}//BlockInformation
 	
 	
 }// PlantInformation_MESLocators

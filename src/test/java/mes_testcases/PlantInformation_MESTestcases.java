@@ -26,7 +26,7 @@ public class PlantInformation_MESTestcases {
 	}
 
 	@Test()
-	public void Attest() throws InterruptedException {
+	public void AttestPlantDetails() throws InterruptedException {
 
 		Report.createTest("🧪 Laurel PM");
 		Report.createNode("Login Page ");
@@ -64,6 +64,22 @@ public class PlantInformation_MESTestcases {
 //		mes_loginactions.mesloginmethods.verifyLoginPageisShown("http://10.106.100.177:8081/MES/PM/pmplantDetails");
 //		Report.logInfo("Verified Login URL ");
 
+	}
+	
+	
+	@Test()
+	public void AttestBlockDetails() {
+		
+		Report.createTest("AttestBlockDetails");
+		Report.createNode("Login Page ");
+		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
+		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
+		mes_loginactions.mesloginmethods.ClickLoginButton();
+		Report.logInfo("Log into Blockdetails");
+		
+		plantinformation_mesactions.plantinformationmethods.menu.ClickMenuBotton();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickBlockDetails();
+		
 	}
 
 	@AfterMethod()

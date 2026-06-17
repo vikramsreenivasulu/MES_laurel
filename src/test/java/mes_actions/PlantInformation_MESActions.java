@@ -15,6 +15,7 @@ public class PlantInformation_MESActions {
 
 	public PlantInformationMethods plantinformationmethods;
 
+	public BlockInformationMethods blockinformationmethods;
 	public PlantInformation_MESLocators plantInformation_meslocators = new PlantInformation_MESLocators();
 
 	public PlantInformation_MESActions() {
@@ -165,5 +166,25 @@ public class PlantInformation_MESActions {
 		}// PlantInforamtion
 
 	}// PlantInformationMethods
+	
+	public class BlockInformationMethods {
+		
+		public BlockInformation blockinformation;
+		
+		public BlockInformationMethods() {
+			
+			blockinformation = new BlockInformation();
+		}
+		
+		public class BlockInformation{
+			
+			public void ClickBlockDetails() {
+				plantInformation_meslocators.blockinformation.PlantBlockTab.click();
+			}
+		}
+		
+		
+		
+	}//BlockInformtionMethods
 
 }// PlantInformation_MESActions
