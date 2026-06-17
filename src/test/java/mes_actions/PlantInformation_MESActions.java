@@ -1,6 +1,7 @@
 package mes_actions;
 
 import java.time.Duration;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -139,6 +140,24 @@ public class PlantInformation_MESActions {
 							plantInformation_meslocators.plantinformation.addplantdetails.PlantFax));
 
 					plantName.sendKeys(PlantFax);
+				}
+				
+				public void saveOrCancel() {
+				    
+					plantInformation_meslocators.plantinformation.addplantdetails.SaveButton.click();
+
+					
+					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
+
+					WebElement message = wait.until(
+					        ExpectedConditions.visibilityOf(
+					                plantInformation_meslocators.plantinformation.addplantdetails.afterClickingSave));
+
+					
+					if (message.isDisplayed()) {
+						plantInformation_meslocators.plantinformation.addplantdetails.CancelButton.click();
+					    System.out.println("Data already saved. Cancel button clicked.");
+					}
 				}
 				
 			}// AddPlantdetails

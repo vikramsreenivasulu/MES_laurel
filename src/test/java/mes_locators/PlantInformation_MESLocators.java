@@ -1,3 +1,5 @@
+
+
 package mes_locators;
 
 import org.openqa.selenium.WebElement;
@@ -82,6 +84,14 @@ public class PlantInformation_MESLocators {
 			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[6]/td[6]/input[1]")
 			public WebElement PlantFax;
 			
+			@FindBy(xpath="//button[@id='plantDialogForm:savePlantBtn']//span[1]")
+			public WebElement SaveButton;
+			
+			@FindBy(xpath="//button[@name='plantDialogForm:j_idt362']//span[1]")
+			public WebElement CancelButton;
+			
+			@FindBy(xpath="//span[text()='Please enter unique plant code.']")
+			public WebElement afterClickingSave;
 		}//AddPlantDetails
 		
 		

@@ -42,6 +42,7 @@ public class PlantInformation_MESTestcases {
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantDetails();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickAddPlantDetails();
 
+		
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantName("VS_TATA ELECTRO");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCode("TE-BLR-01");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
@@ -51,6 +52,8 @@ public class PlantInformation_MESTestcases {
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPinCode("560100");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPhone("+91 9123456780");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantFax("80 4567 8901");
+		Report.logInfo("Plant Values Entered");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.saveOrCancel();
 		BaseClass.Sleep();
 //		Report.logInfo("plant details created");
 		
