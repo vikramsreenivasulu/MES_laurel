@@ -66,6 +66,8 @@ public class Report {
 		extentReports.attachReporter(extentSparkReporter);
 
 	}
+	
+	
 
 	public static void createTest(String testName) {
 		extentTest = extentReports.createTest(testName);

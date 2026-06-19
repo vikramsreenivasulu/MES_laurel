@@ -60,7 +60,7 @@ public class PlantInformation_MESLocators {
 				PageFactory.initElements(BaseClass.driver, this);
 			}
 			
-			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[1]/td[2]/input[1]")
+			@FindBy(xpath="//table/tbody/tr/td/input[@id='plantDialogForm:j_idt295']")
 			public WebElement PlantName;
 			
 			@FindBy(xpath="//table[@id='plantDialogForm:j_idt289']/tbody[1]/tr[2]/td[2]/input[1]")

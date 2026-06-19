@@ -21,6 +21,8 @@ public class PlantInformation_MESActions {
 	public PlantInformation_MESActions() {
 
 		plantinformationmethods = new PlantInformationMethods();
+		blockinformationmethods = new BlockInformationMethods();
+
 	}
 
 	public class PlantInformationMethods {
@@ -67,16 +69,17 @@ public class PlantInformation_MESActions {
 
 			public class AddPlantdetails {
 
+
 				public void PlantName(String plantname) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
 					WebElement plantName = wait.until(ExpectedConditions.elementToBeClickable(
 							plantInformation_meslocators.plantinformation.addplantdetails.PlantName));
-
+					
 					plantName.sendKeys(plantname);
 
 				}
-				
+
 				public void PlantCode(String plantcode) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 

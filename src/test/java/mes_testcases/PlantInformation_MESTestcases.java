@@ -2,6 +2,8 @@ package mes_testcases;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -15,17 +17,21 @@ public class PlantInformation_MESTestcases {
 
 	public MES_LoginActions mes_loginactions;
 	public PlantInformation_MESActions plantinformation_mesactions;
-
+	
 	@BeforeSuite
+	public void beforeSuite() {
+	    Report.startReport();
+	}
+
+	@BeforeMethod(alwaysRun = true)
 	public void BeforeSuit() {
 		BaseClass.startdriver();
 		Verify.restAssertion();
-		Report.startReport();
 		plantinformation_mesactions = new PlantInformation_MESActions();
 		mes_loginactions = new MES_LoginActions();
 	}
 
-	@Test()
+	@Test(priority=0)
 	public void AttestPlantDetails() throws InterruptedException {
 
 		Report.createTest("🧪 Laurel PM");
@@ -41,8 +47,8 @@ public class PlantInformation_MESTestcases {
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantInformation();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantDetails();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickAddPlantDetails();
-
 		
+		BaseClass.Sleep();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantName("VS_TATA ELECTRO");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCode("TE-BLR-01");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
@@ -55,7 +61,7 @@ public class PlantInformation_MESTestcases {
 		Report.logInfo("Plant Values Entered");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.saveOrCancel();
 		BaseClass.Sleep();
-//		Report.logInfo("plant details created");
+		Report.logInfo("plant details created");
 		
 		
 		
@@ -67,26 +73,34 @@ public class PlantInformation_MESTestcases {
 	}
 	
 	
-	@Test()
-	public void AttestBlockDetails() {
+	@Test(priority=1)
+	public void AttestBlockDetails() throws InterruptedException {
 		
 		Report.createTest("AttestBlockDetails");
 		Report.createNode("Login Page ");
 		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
-		Report.logInfo("Log into Blockdetails");
+		
 		
 		plantinformation_mesactions.plantinformationmethods.menu.ClickMenuBotton();
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantInformation();
+		BaseClass.Sleep();
 		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickBlockDetails();
-		
+		Report.logInfo("Log into Blockdetails");
 	}
 
-	@AfterMethod()
-	public void Aftersuit(ITestResult result) {
-		BaseClass.StopDriver();
+	@AfterMethod(alwaysRun = true)
+	public void AfterMethod(ITestResult result) {
+		
 		Report.getResult(result);
-		Report.flush();
+		BaseClass.StopDriver();
 	}
+	
+	@AfterSuite
+	public void afterSuite() {
+	    Report.flush();
+	}
+
 
 }// PlantInformation_MESTestcases
