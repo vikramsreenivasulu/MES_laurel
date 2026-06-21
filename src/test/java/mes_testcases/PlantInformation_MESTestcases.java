@@ -34,7 +34,7 @@ public class PlantInformation_MESTestcases {
 	@Test(priority=0)
 	public void AttestPlantDetails() throws InterruptedException {
 
-		Report.createTest("🧪 Laurel PM");
+		Report.createTest("🧪 Laurel Plant Details");
 		Report.createNode("Login Page ");
 		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
@@ -76,8 +76,8 @@ public class PlantInformation_MESTestcases {
 	@Test(priority=1)
 	public void AttestBlockDetails() throws InterruptedException {
 		
-		Report.createTest("AttestBlockDetails");
-		Report.createNode("Login Page ");
+		Report.createTest("🧪 Laurel Block Details");
+		Report.createNode("Block Details");
 		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
@@ -88,6 +88,12 @@ public class PlantInformation_MESTestcases {
 		BaseClass.Sleep();
 		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickBlockDetails();
 		Report.logInfo("Log into Blockdetails");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickAddBlockDetails();
+		BaseClass.Sleep();
+		
+		
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.ClickplantCode("TE-BLR-01");
+		BaseClass.Sleep();
 	}
 
 	@AfterMethod(alwaysRun = true)

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import Utility.BaseClass;
 import Utility.Verify;
 import mes_locators.PlantInformation_MESLocators;
+import mes_locators.PlantInformation_MESLocators.BlockInformation.AddBlockDetails;
 
 public class PlantInformation_MESActions {
 
@@ -171,23 +172,42 @@ public class PlantInformation_MESActions {
 	}// PlantInformationMethods
 	
 	public class BlockInformationMethods {
-		
-		public BlockInformation blockinformation;
-		
-		public BlockInformationMethods() {
-			
-			blockinformation = new BlockInformation();
-		}
-		
-		public class BlockInformation{
-			
-			public void ClickBlockDetails() {
-				plantInformation_meslocators.blockinformation.PlantBlockTab.click();
-			}
-		}
-		
-		
-		
-	}//BlockInformtionMethods
+
+	    public BlockInformation blockinformation;
+	   
+
+	    public BlockInformationMethods() {
+	    	
+	        blockinformation = new BlockInformation();
+	        
+	    }
+
+	    public class BlockInformation {
+
+	    	public AddBlockDetails addblockdetails;
+	    	public BlockInformation() {
+	    		addblockdetails = new AddBlockDetails();
+	    	}
+	        public void ClickBlockDetails() {
+	            plantInformation_meslocators.blockinformation.PlantBlockTab.click();
+	        }
+
+	        public void ClickAddBlockDetails() {
+	            plantInformation_meslocators.blockinformation.AddBlockDetails.click();
+	        }
+	    }
+
+	    public class AddBlockDetails {
+
+	        public void ClickplantCode(String PlantCode) throws InterruptedException {   
+	            BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.Plantcode, PlantCode); 
+	        }
+	        
+	        
+	        
+	    }
+	    
+	    
+	}//BlockInformationMethods
 
 }// PlantInformation_MESActions

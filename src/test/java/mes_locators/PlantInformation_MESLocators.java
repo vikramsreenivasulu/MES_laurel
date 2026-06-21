@@ -105,13 +105,28 @@ public class PlantInformation_MESLocators {
 
 	public class BlockInformation{
 		
+		public AddBlockDetails addblockdetails;
 		public BlockInformation() {
+			
+			addblockdetails = new AddBlockDetails();
 			PageFactory.initElements(BaseClass.driver, this);
 		}
 		
 		@FindBy(xpath="//a[normalize-space(text())='Block Details']")
 		public WebElement PlantBlockTab;
 		
+		@FindBy(xpath="(//span[@class='ui-button-text ui-c'])[1]")
+		public WebElement AddBlockDetails;
+		
+		public class AddBlockDetails{
+			
+			public AddBlockDetails() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="(//span[@class='ui-icon ui-icon-triangle-1-s ui-c'])[1]")
+			public WebElement Plantcode;
+		}
 	}//BlockInformation
 	
 	

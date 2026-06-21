@@ -67,6 +67,8 @@ public class BaseClass {
 	    element.click();
 	    Thread.sleep(1000);
 	}
+	
+	
 	public static  void StopDriver() {
 		
 		driver.quit();
