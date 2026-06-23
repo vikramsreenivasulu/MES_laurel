@@ -203,7 +203,9 @@ public class PlantInformation_MESActions {
 	            BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.Plantcode, PlantCode); 
 	        }
 	        
-	        
+	         public void BlockDetailsDiscrp(String Discrp) {
+	        	 plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp.sendKeys(Discrp);
+	         }
 	        
 	    }
 	    

@@ -126,6 +126,9 @@ public class PlantInformation_MESLocators {
 			
 			@FindBy(xpath="(//span[@class='ui-icon ui-icon-triangle-1-s ui-c'])[1]")
 			public WebElement Plantcode;
+			
+			@FindBy(xpath="//textarea[@id='blockDialogForm:descIpAreaBox']")
+			public WebElement BlockDetailsDiscrp;
 		}
 	}//BlockInformation
 	

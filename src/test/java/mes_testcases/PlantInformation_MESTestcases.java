@@ -94,6 +94,7 @@ public class PlantInformation_MESTestcases {
 		
 		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.ClickplantCode("TE-BLR-01");
 		BaseClass.Sleep();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.BlockDetailsDiscrp("BlockDetails of Product ");
 	}
 
 	@AfterMethod(alwaysRun = true)
