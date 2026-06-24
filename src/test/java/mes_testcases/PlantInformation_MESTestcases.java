@@ -17,10 +17,10 @@ public class PlantInformation_MESTestcases {
 
 	public MES_LoginActions mes_loginactions;
 	public PlantInformation_MESActions plantinformation_mesactions;
-	
+
 	@BeforeSuite
 	public void beforeSuite() {
-	    Report.startReport();
+		Report.startReport();
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -31,7 +31,7 @@ public class PlantInformation_MESTestcases {
 		mes_loginactions = new MES_LoginActions();
 	}
 
-	@Test(priority=0)
+	@Test(priority = 0)
 	public void AttestPlantDetails() throws InterruptedException {
 
 		Report.createTest("🧪 Laurel Plant Details");
@@ -40,83 +40,87 @@ public class PlantInformation_MESTestcases {
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
 
-
 		plantinformation_mesactions.plantinformationmethods.menu.verifyPlandDetailsBreadcrumbShown();
 		Report.logInfo("Verified Bread Crumb");
 		plantinformation_mesactions.plantinformationmethods.menu.ClickMenuBotton();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantInformation();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantDetails();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickAddPlantDetails();
-		
+
 		BaseClass.Sleep();
-		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantName("VS_TATA ELECTRO");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails
+				.PlantName("VS_TATA ELECTRO");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCode("TE-BLR-01");
-		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails
+				.PlantAddress("Plat no 12, Electronic city phase 2, hosur road");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCity("Bangalore");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantState("Karnataka");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantCountry("India");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPinCode("560100");
-		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantPhone("+91 9123456780");
+		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails
+				.PlantPhone("+91 9123456780");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.PlantFax("80 4567 8901");
 		Report.logInfo("Plant Values Entered");
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.addplantdetails.saveOrCancel();
 		BaseClass.Sleep();
 		Report.logInfo("plant details created");
-		
-		
-		
-		
+
 //		mes_loginactions.mesloginmethods.ClickLogOutButton();
 //		mes_loginactions.mesloginmethods.verifyLoginPageisShown("http://10.106.100.177:8081/MES/PM/pmplantDetails");
 //		Report.logInfo("Verified Login URL ");
 
 	}
-	
-	
-	@Test(priority=1)
+
+	@Test(priority = 1)
 	public void AttestBlockDetails() throws InterruptedException {
-		
+
 		Report.createTest("🧪 Laurel Block Details");
 		Report.createNode("Block Details");
 		mes_loginactions.mesloginmethods.insideloginissue.UserID("AUTO_VS_PMMGR");
 		mes_loginactions.mesloginmethods.insideloginissue.UserPassword("Asdf@123");
 		mes_loginactions.mesloginmethods.ClickLoginButton();
-		
-		
+
 		plantinformation_mesactions.plantinformationmethods.menu.ClickMenuBotton();
 		plantinformation_mesactions.plantinformationmethods.plantinforamtion.ClickPlantInformation();
 		BaseClass.Sleep();
 		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickBlockDetails();
 		Report.logInfo("Log into Blockdetails");
-		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickAddBlockDetails();
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.ClickAddBlockDetails();
 		BaseClass.Sleep();
-		
-		
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterplantCode("TE-BLR-01");
-		BaseClass.Sleep();
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockCode("BLK001");
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockName("Block A");
-		BaseClass.Sleep();
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectBlockStatus("ACTIVE");
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectCommissioningDate("24/06/2026");
-		BaseClass.Sleep();
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockDetailsDiscrp("BlockDetails of Product ");
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.saveOrCancel();
-		
-		
+
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterplantCode("TE-BLR-01");
+//		BaseClass.Sleep();
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockCode("BLK001");
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockName("Block A");
+//		BaseClass.Sleep();
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectBlockStatus("ACTIVE");
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectCommissioningDate("24/06/2026");
+//		BaseClass.Sleep();
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockDetailsDiscrp("BlockDetails of Product ");
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.saveOrCancel();
+//		Report.logInfo("Blockdetail Created");
+//		BaseClass.Sleep();
+//		BaseClass.Sleep();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails
+				.BlockDetailsSearch("BLK001");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectBlockDetails();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.BlockDetailsEditButton();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.VerifyEditBlockDetails();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails
+				.EditBlockDetailsDescrip("BlockDetails of Product has been edited ");
+//		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.ClickSaveButton();
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void AfterMethod(ITestResult result) {
-		
+
 		Report.getResult(result);
-		BaseClass.StopDriver();
-	}
-	
-	@AfterSuite
-	public void afterSuite() {
-	    Report.flush();
+		// BaseClass.StopDriver();
 	}
 
+	@AfterSuite
+	public void afterSuite() {
+		Report.flush();
+	}
 
 }// PlantInformation_MESTestcases

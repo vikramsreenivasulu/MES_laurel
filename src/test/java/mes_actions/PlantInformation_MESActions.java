@@ -217,11 +217,13 @@ public class PlantInformation_MESActions {
 			}
 
 			public void SelectBlockStatus(String status) throws InterruptedException {
-				BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.BlockStatus, status);
+				BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.BlockStatus,
+						status);
 			}
 
 			public void SelectCommissioningDate(String date) throws InterruptedException {
-				plantInformation_meslocators.blockinformation.addblockdetails.CommissioningDate.sendKeys(date,Keys.ENTER);
+				plantInformation_meslocators.blockinformation.addblockdetails.CommissioningDate.sendKeys(date,
+						Keys.ENTER);
 
 			}
 
@@ -229,18 +231,16 @@ public class PlantInformation_MESActions {
 
 				plantInformation_meslocators.blockinformation.addblockdetails.SaveButton.click();
 
-				
 				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
 
-				WebElement message = wait.until(ExpectedConditions.visibilityOf(
-						plantInformation_meslocators.blockinformation.addblockdetails.afterClickingSave));
+				WebElement message = wait.until(ExpectedConditions
+						.visibilityOf(plantInformation_meslocators.blockinformation.addblockdetails.afterClickingSave));
 
 				if (message.isDisplayed()) {
 					plantInformation_meslocators.blockinformation.addblockdetails.CancelButton.click();
 					System.out.println("Data already saved. Cancel button clicked.");
 				}
-				
-				
+
 //				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
 //
 //				String actualmessage = wait.until(ExpectedConditions.visibilityOf(
@@ -253,9 +253,46 @@ public class PlantInformation_MESActions {
 //					plantInformation_meslocators.blockinformation.addblockdetails.CancelButton.click();
 //					System.out.println("Data already saved. Cancel button clicked.");
 //				}
+
+			}
+
+			public void BlockDetailsSearch(String BlockCode) {
+				plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsSearch.sendKeys(BlockCode,
+						Keys.ENTER);
+				BaseClass.Sleep();
+			}
+
+			public void SelectBlockDetails() {			
+				BaseClass.Sleep();
+				plantInformation_meslocators.blockinformation.addblockdetails.SelectBlockDetails.click();
+				BaseClass.Sleep();
+
+			}
+
+			public void BlockDetailsEditButton() {
+				plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsEditButton.click();
+			}
+
+			public void VerifyEditBlockDetails() {
+				String text = plantInformation_meslocators.blockinformation.addblockdetails.VerifyEditBlockDetails.getText();
+				System.out.println("text"+text);
+				Verify.verifyEquals(text, text);
 			}
 			
-		}//AddBlockDetails
+			public void EditBlockDetailsDescrip(String BD_Description) {
+				WebElement input = plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp;
+				//input.clear();
+				input.sendKeys(BD_Description);
+				
+//				plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp
+//						.sendKeys(BD_Description);
+			}
+
+			public void ClickSaveButton() {
+				plantInformation_meslocators.blockinformation.addblockdetails.SaveButton.click();
+			}
+
+		}// AddBlockDetails
 
 	}// BlockInformationMethods
 

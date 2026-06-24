@@ -95,8 +95,13 @@ public class BaseClass {
 		driver.quit();
 	}
 	
-	public  static void  Sleep() throws InterruptedException {
-		Thread.sleep(3000);
+	public  static void  Sleep(){
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
