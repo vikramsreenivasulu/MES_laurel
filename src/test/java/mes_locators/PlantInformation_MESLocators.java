@@ -127,9 +127,35 @@ public class PlantInformation_MESLocators {
 			@FindBy(xpath="(//span[@class='ui-icon ui-icon-triangle-1-s ui-c'])[1]")
 			public WebElement Plantcode;
 			
+			@FindBy(xpath="//table[@id='blockDialogForm:j_idt106']/tbody[1]/tr[1]/td[4]/input[1]")
+			public WebElement BlockCode;
+			
+			@FindBy(xpath="//table[@id='blockDialogForm:j_idt106']/tbody[1]/tr[2]/td[2]/input[1]")
+			public WebElement BlockName;
+			
+			@FindBy(xpath="//table[@id='blockDialogForm:j_idt106']/tbody[1]/tr[2]/td[4]/div[1]/div[3]/span[1]")
+			public WebElement BlockStatus;
+			
+			@FindBy(xpath="//table[@id='blockDialogForm:j_idt106']/tbody[1]/tr[3]/td[2]/span[1]/input[1]")
+			public WebElement CommissioningDate;
+			
 			@FindBy(xpath="//textarea[@id='blockDialogForm:descIpAreaBox']")
 			public WebElement BlockDetailsDiscrp;
-		}
+			
+			@FindBy(xpath="//table[@class='Fright']/tbody[1]/tr[1]/td[1]/button[1]/span[1]")
+			public WebElement SaveButton;
+			
+			@FindBy(xpath="//table[@class='Fright']/tbody[1]/tr[1]/td[1]/button[2]/span[1]")
+			public WebElement CancelButton;
+			
+			@FindBy(xpath="//div[@id='growl_container']")
+			public WebElement afterClickingSave;
+			
+			
+
+			
+		}//AddBlockDetails
+		
 	}//BlockInformation
 	
 	

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class BaseClass {
@@ -50,6 +51,26 @@ public class BaseClass {
         options.setExperimentalOption("prefs", prefs);
         return options; 
     }
+	
+	public static void selectDate(String date) {
+
+	    String[] dateParts = date.split("/");
+
+	    String day = dateParts[0];
+	    String month = dateParts[1];
+	    String year = dateParts[2];
+
+	    // Year select
+	    new Select(driver.findElement(By.className("ui-datepicker-year")))
+	            .selectByVisibleText(year);
+
+	    // Month select (June = 5 because index starts from 0)
+	    new Select(driver.findElement(By.className("ui-datepicker-month")))
+	            .selectByValue(String.valueOf(Integer.parseInt(month) - 1));
+
+	    // Day select
+	    driver.findElement(By.xpath("//td[@data-handler='selectDay']/a[text()='" + day + "']")).click();
+	}
 
 	public static void Dropdown(WebElement dropdown, String value) throws InterruptedException {
 	    dropdown.click();
@@ -92,5 +113,9 @@ public class BaseClass {
 		    System.out.println("Popup not present");
 		}
 	}//Popupclick
+	
+
+	
+	
 	
 }

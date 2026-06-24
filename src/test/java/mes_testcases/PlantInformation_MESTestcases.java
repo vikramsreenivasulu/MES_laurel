@@ -92,9 +92,18 @@ public class PlantInformation_MESTestcases {
 		BaseClass.Sleep();
 		
 		
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.ClickplantCode("TE-BLR-01");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterplantCode("TE-BLR-01");
 		BaseClass.Sleep();
-		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.BlockDetailsDiscrp("BlockDetails of Product ");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockCode("BLK001");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockName("Block A");
+		BaseClass.Sleep();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectBlockStatus("ACTIVE");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.SelectCommissioningDate("24/06/2026");
+		BaseClass.Sleep();
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.EnterBlockDetailsDiscrp("BlockDetails of Product ");
+		plantinformation_mesactions.blockinformationmethods.blockinformation.addblockdetails.saveOrCancel();
+		
+		
 	}
 
 	@AfterMethod(alwaysRun = true)

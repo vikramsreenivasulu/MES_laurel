@@ -3,6 +3,7 @@ package mes_actions;
 import java.time.Duration;
 import java.util.concurrent.TimeoutException;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -70,13 +71,12 @@ public class PlantInformation_MESActions {
 
 			public class AddPlantdetails {
 
-
 				public void PlantName(String plantname) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
 					WebElement plantName = wait.until(ExpectedConditions.elementToBeClickable(
 							plantInformation_meslocators.plantinformation.addplantdetails.PlantName));
-					
+
 					plantName.sendKeys(plantname);
 
 				}
@@ -89,7 +89,7 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(plantcode);
 				}
-				
+
 				public void PlantAddress(String PlantAddress) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -98,7 +98,7 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantAddress);
 				}
-				
+
 				public void PlantCity(String PlantCity) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -107,7 +107,7 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantCity);
 				}
-				
+
 				public void PlantState(String PlantState) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -116,10 +116,12 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantState);
 				}
-				
+
 				public void PlantCountry(String Country) throws InterruptedException {
-					BaseClass.Dropdown(plantInformation_meslocators.plantinformation.addplantdetails.PlantCountry, Country);
+					BaseClass.Dropdown(plantInformation_meslocators.plantinformation.addplantdetails.PlantCountry,
+							Country);
 				}
+
 				public void PlantPinCode(String PlantPinCode) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -128,7 +130,7 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantPinCode);
 				}
-				
+
 				public void PlantPhone(String PlantPhone) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -137,7 +139,7 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantPhone);
 				}
-				
+
 				public void PlantFax(String PlantFax) {
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(20));
 
@@ -146,70 +148,115 @@ public class PlantInformation_MESActions {
 
 					plantName.sendKeys(PlantFax);
 				}
-				
+
 				public void saveOrCancel() {
-				    
+
 					plantInformation_meslocators.plantinformation.addplantdetails.SaveButton.click();
 
-					
 					WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
 
-					WebElement message = wait.until(
-					        ExpectedConditions.visibilityOf(
-					                plantInformation_meslocators.plantinformation.addplantdetails.afterClickingSave));
+					WebElement message = wait.until(ExpectedConditions.visibilityOf(
+							plantInformation_meslocators.plantinformation.addplantdetails.afterClickingSave));
 
-					
 					if (message.isDisplayed()) {
 						plantInformation_meslocators.plantinformation.addplantdetails.CancelButton.click();
-					    System.out.println("Data already saved. Cancel button clicked.");
+						System.out.println("Data already saved. Cancel button clicked.");
 					}
 				}
-				
+
 			}// AddPlantdetails
 
 		}// PlantInforamtion
 
 	}// PlantInformationMethods
-	
+
 	public class BlockInformationMethods {
 
-	    public BlockInformation blockinformation;
-	   
+		public BlockInformation blockinformation;
 
-	    public BlockInformationMethods() {
-	    	
-	        blockinformation = new BlockInformation();
-	        
-	    }
+		public BlockInformationMethods() {
 
-	    public class BlockInformation {
+			blockinformation = new BlockInformation();
 
-	    	public AddBlockDetails addblockdetails;
-	    	public BlockInformation() {
-	    		addblockdetails = new AddBlockDetails();
-	    	}
-	        public void ClickBlockDetails() {
-	            plantInformation_meslocators.blockinformation.PlantBlockTab.click();
-	        }
+		}
 
-	        public void ClickAddBlockDetails() {
-	            plantInformation_meslocators.blockinformation.AddBlockDetails.click();
-	        }
-	    }
+		public class BlockInformation {
 
-	    public class AddBlockDetails {
+			public AddBlockDetails addblockdetails;
 
-	        public void ClickplantCode(String PlantCode) throws InterruptedException {   
-	            BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.Plantcode, PlantCode); 
-	        }
-	        
-	         public void BlockDetailsDiscrp(String Discrp) {
-	        	 plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp.sendKeys(Discrp);
-	         }
-	        
-	    }
-	    
-	    
-	}//BlockInformationMethods
+			public BlockInformation() {
+				addblockdetails = new AddBlockDetails();
+			}
+
+			public void ClickBlockDetails() {
+				plantInformation_meslocators.blockinformation.PlantBlockTab.click();
+			}
+
+			public void ClickAddBlockDetails() {
+				plantInformation_meslocators.blockinformation.AddBlockDetails.click();
+			}
+		}
+
+		public class AddBlockDetails {
+
+			public void EnterplantCode(String PlantCode) throws InterruptedException {
+				BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.Plantcode,
+						PlantCode);
+			}
+
+			public void EnterBlockDetailsDiscrp(String Discrp) {
+				plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp.sendKeys(Discrp);
+			}
+
+			public void EnterBlockCode(String blockCode) {
+				plantInformation_meslocators.blockinformation.addblockdetails.BlockCode.sendKeys(blockCode);
+			}
+
+			public void EnterBlockName(String blockName) {
+				plantInformation_meslocators.blockinformation.addblockdetails.BlockName.sendKeys(blockName);
+			}
+
+			public void SelectBlockStatus(String status) throws InterruptedException {
+				BaseClass.selectDropdown(plantInformation_meslocators.blockinformation.addblockdetails.BlockStatus, status);
+			}
+
+			public void SelectCommissioningDate(String date) throws InterruptedException {
+				plantInformation_meslocators.blockinformation.addblockdetails.CommissioningDate.sendKeys(date,Keys.ENTER);
+
+			}
+
+			public void saveOrCancel() {
+
+				plantInformation_meslocators.blockinformation.addblockdetails.SaveButton.click();
+
+				
+				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
+
+				WebElement message = wait.until(ExpectedConditions.visibilityOf(
+						plantInformation_meslocators.blockinformation.addblockdetails.afterClickingSave));
+
+				if (message.isDisplayed()) {
+					plantInformation_meslocators.blockinformation.addblockdetails.CancelButton.click();
+					System.out.println("Data already saved. Cancel button clicked.");
+				}
+				
+				
+//				WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(5));
+//
+//				String actualmessage = wait.until(ExpectedConditions.visibilityOf(
+//						plantInformation_meslocators.blockinformation.addblockdetails.afterClickingSave)).getText();
+//				System.out.println(actualmessage);
+//				
+//				String expectedmessage = actualmessage;
+//				
+//				if (actualmessage.equals(expectedmessage)) {
+//					plantInformation_meslocators.blockinformation.addblockdetails.CancelButton.click();
+//					System.out.println("Data already saved. Cancel button clicked.");
+//				}
+			}
+			
+		}//AddBlockDetails
+
+	}// BlockInformationMethods
 
 }// PlantInformation_MESActions
