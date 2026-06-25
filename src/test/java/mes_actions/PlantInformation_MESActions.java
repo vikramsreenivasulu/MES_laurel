@@ -275,13 +275,14 @@ public class PlantInformation_MESActions {
 
 			public void VerifyEditBlockDetails() {
 				String text = plantInformation_meslocators.blockinformation.addblockdetails.VerifyEditBlockDetails.getText();
-				System.out.println("text"+text);
+				System.out.println("text:"+text);
 				Verify.verifyEquals(text, text);
 			}
 			
 			public void EditBlockDetailsDescrip(String BD_Description) {
 				WebElement input = plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp;
-				//input.clear();
+				input.clear();
+				BaseClass.Sleep();
 				input.sendKeys(BD_Description);
 				
 //				plantInformation_meslocators.blockinformation.addblockdetails.BlockDetailsDiscrp

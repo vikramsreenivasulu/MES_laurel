@@ -157,7 +157,7 @@ public class PlantInformation_MESLocators {
 			@FindBy(xpath = "//table[@class='panelGridB']/tbody[1]/tr[1]/td[1]/button[2]/span[1]")
 			public WebElement BlockDetailsEditButton;
 			
-			@FindBy(xpath="(//div/span[@class='ui-dialog-title'])[3]")
+			@FindBy(xpath="//div[@aria-hidden='false']//span[@class='ui-dialog-title']")
 			public WebElement VerifyEditBlockDetails;
 
 		}// AddBlockDetails
