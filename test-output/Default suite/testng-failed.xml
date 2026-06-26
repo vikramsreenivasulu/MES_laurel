@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mes_testcases.PlantInformation_MESTestcases">
+      <class name="mes_testcases.RoomMaintenance_TestCases">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="AttestBlockDetails"/>
-          <include name="BeforeSuit"/>
           <include name="AfterMethod"/>
+          <include name="BeforeSuit"/>
+          <include name="ATtestRoomMaintenance"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- mes_testcases.PlantInformation_MESTestcases -->
+      </class> <!-- mes_testcases.RoomMaintenance_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

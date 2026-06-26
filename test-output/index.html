@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--1927183626\testng-customsuite.xml</span>
+                    <span>C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--974742450\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="mes_testcases.PlantInformation_MESTestcases" class="method navigator-link" hash-for-method="AttestBlockDetails">AttestBlockDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="mes_testcases.PlantInformation_MESTestcases" class="method navigator-link" hash-for-method="AttestPlantDetails">AttestPlantDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="mes_testcases.RoomMaintenance_TestCases" class="method navigator-link" hash-for-method="ATtestRoomMaintenance">ATtestRoomMaintenance</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,21 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">mes_testcases.PlantInformation_MESTestcases</span>
+              <span class="class-name">mes_testcases.RoomMaintenance_TestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AttestBlockDetails">
-                  </a> <!-- AttestBlockDetails -->
-                  <span class="method-name">AttestBlockDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="AttestPlantDetails">
-                  </a> <!-- AttestPlantDetails -->
-                  <span class="method-name">AttestPlantDetails</span>
+                  <a name="ATtestRoomMaintenance">
+                  </a> <!-- ATtestRoomMaintenance -->
+                  <span class="method-name">ATtestRoomMaintenance</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--1927183626\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\vikram.sreenivasulu\AppData\Local\Temp\testng-eclipse--974742450\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -157,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;mes_testcases.PlantInformation_MESTestcases&quot;/&gt;
+      &lt;class name=&quot;mes_testcases.RoomMaintenance_TestCases&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;ATtestRoomMaintenance&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mes_testcases.RoomMaintenance_TestCases --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -197,20 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AttestBlockDetails')
-data.setCell(0, 2, 'mes_testcases.PlantInformation_MESTestcases')
-data.setCell(0, 3, 42291);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AttestPlantDetails')
-data.setCell(1, 2, 'mes_testcases.PlantInformation_MESTestcases')
-data.setCell(1, 3, 11964);
+data.setCell(0, 1, 'ATtestRoomMaintenance')
+data.setCell(0, 2, 'mes_testcases.RoomMaintenance_TestCases')
+data.setCell(0, 3, 3621);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -236,38 +224,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">mes_testcases.PlantInformation_MESTestcases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">mes_testcases.RoomMaintenance_TestCases</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">BeforeSuit</span>
-                <span class="method-start">217 ms</span>
+                <span class="method-start">324 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AttestPlantDetails</span>
-                <span class="method-start">3367 ms</span>
+                <span class="method-name">ATtestRoomMaintenance</span>
+                <span class="method-start">5910 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=AttestPlantDetails status=SUCCESS method=PlantInformation_MESTestcases.AttestPlantD...)</span>
-                <span class="method-start">15334 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">BeforeSuit</span>
-                <span class="method-start">15592 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">AttestBlockDetails</span>
-                <span class="method-start">18161 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">AfterMethod([TestResult name=AttestBlockDetails status=SUCCESS method=PlantInformation_MESTestcases.AttestBlockD...)</span>
-                <span class="method-start">60452 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=ATtestRoomMaintenance status=SUCCESS method=RoomMaintenance_TestCases.ATtestRoomMai...)</span>
+                <span class="method-start">9535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">60746 ms</span>
+                <span class="method-start">9586 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
