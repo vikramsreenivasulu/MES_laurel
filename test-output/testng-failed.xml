@@ -5,8 +5,9 @@
     <classes>
       <class name="mes_testcases.RoomMaintenance_TestCases">
         <methods>
-          <include name="AfterMethod"/>
           <include name="BeforeSuit"/>
+          <include name="AfterMethod"/>
+          <include name="beforeSuite"/>
           <include name="ATtestRoomMaintenance"/>
           <include name="afterSuite"/>
         </methods>

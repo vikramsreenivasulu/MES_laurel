@@ -1,5 +1,6 @@
 package mes_actions;
 
+import Utility.BaseClass;
 import mes_locators.RoomMaintenance_MESLocators;
 
 public class RoomMaintenance_MESActions {
@@ -38,6 +39,14 @@ public class RoomMaintenance_MESActions {
 				roommaintenance_meslocators.roommaintenancetab.roomdetails.RoomDetailsTab.click();
 			}
 			
+			public void AddRommDetails() {
+				roommaintenance_meslocators.roommaintenancetab.roomdetails.AddRoomDetails.click();
+			}
+			
+			public void SelectBlockCode(String BlockCode) throws InterruptedException {
+				BaseClass.selectDropdown(roommaintenance_meslocators.roommaintenancetab.roomdetails.BlockCode, BlockCode);
+				
+			}
 			
 		}//RommDetails
 		

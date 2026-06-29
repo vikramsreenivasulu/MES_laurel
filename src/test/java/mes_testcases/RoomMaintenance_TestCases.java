@@ -32,7 +32,7 @@ public class RoomMaintenance_TestCases {
 	}
 
 	@Test()
-	public void ATtestRoomMaintenance() {
+	public void ATtestRoomMaintenance() throws InterruptedException {
 
 		Report.createTest("🧪 RoomMaintenance Details");
 		Report.createNode("Login Page ");
@@ -44,7 +44,8 @@ public class RoomMaintenance_TestCases {
 		roommaintenance_mesactions.menu.ClickMenuButton();
 		roommaintenance_mesactions.roommaintenancetab.ClickRoomMaintenanceTab();
 		roommaintenance_mesactions.roommaintenancetab.roomdetails.ClickRoomDetails();
-
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.AddRommDetails();
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.SelectBlockCode("BLK001");
 	}
 
 	@AfterMethod(alwaysRun = true)

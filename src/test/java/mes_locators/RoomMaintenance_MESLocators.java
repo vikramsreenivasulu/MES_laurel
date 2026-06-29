@@ -47,6 +47,14 @@ public class RoomMaintenance_MESLocators {
 			@FindBy(xpath="//a[normalize-space(text())='Room Details']")
 			public WebElement RoomDetailsTab;
 			
+			@FindBy(xpath="(//table[@class='panelGridB']//span[@class=\"ui-button-text ui-c\"])[1]")
+			public WebElement AddRoomDetails;
+			
+			@FindBy(xpath="(//span[@class='ui-icon ui-icon-triangle-1-s ui-c'])[1]")
+			public WebElement BlockCode;
+			
+//			@FindBy()
+//			public WebElement aaa;
 			
 		}//RoomDetails
 		
