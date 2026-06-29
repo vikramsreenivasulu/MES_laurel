@@ -43,6 +43,7 @@ public class RoomMaintenance_TestCases {
 		BaseClass.Sleep();
 		roommaintenance_mesactions.menu.ClickMenuButton();
 		roommaintenance_mesactions.roommaintenancetab.ClickRoomMaintenanceTab();
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.ClickRoomDetails();
 
 	}
 
@@ -50,7 +51,7 @@ public class RoomMaintenance_TestCases {
 	public void AfterMethod(ITestResult result) {
 
 		Report.getResult(result);
-		// BaseClass.StopDriver();
+		 //BaseClass.StopDriver();
 	}
 
 	@AfterSuite

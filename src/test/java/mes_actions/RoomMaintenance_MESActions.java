@@ -24,10 +24,23 @@ public class RoomMaintenance_MESActions {
 
 	public class RoomMaintenanceTab {
 
+		public RoomDetails roomdetails;
+		public RoomMaintenanceTab() {
+			roomdetails= new RoomDetails();
+		}
 		public void ClickRoomMaintenanceTab() {
 			roommaintenance_meslocators.roommaintenancetab.RoomMaintenance.click();
 		}
 
+		public class RoomDetails{
+			
+			public void ClickRoomDetails() {
+				roommaintenance_meslocators.roommaintenancetab.roomdetails.RoomDetailsTab.click();
+			}
+			
+			
+		}//RommDetails
+		
 	}// RoomMaintenanceTab
 
 }// RoomMaintenance_MESActions

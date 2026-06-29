@@ -29,13 +29,27 @@ public class RoomMaintenance_MESLocators {
 
 	public class RoomMaintenanceTab {
 
+		public RoomDetails roomdetails;
 		public RoomMaintenanceTab() {
+			roomdetails = new RoomDetails();
 			PageFactory.initElements(BaseClass.driver, this);
 		}
 
 		@FindBy(xpath = "//a[normalize-space(text())='Room Maintenance']")
 		public WebElement RoomMaintenance;
 
+		public class RoomDetails{
+			
+			public RoomDetails() {
+				PageFactory.initElements(BaseClass.driver, this);
+			}
+			
+			@FindBy(xpath="//a[normalize-space(text())='Room Details']")
+			public WebElement RoomDetailsTab;
+			
+			
+		}//RoomDetails
+		
 	}// RoomMaintenanceTab
 
 }// RoomMaintenance_MESLocators
