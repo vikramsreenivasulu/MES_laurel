@@ -40,7 +40,9 @@ public class RoomMaintenance_MESLocators {
 
 		public class RoomDetails{
 			
+		
 			public RoomDetails() {
+				
 				PageFactory.initElements(BaseClass.driver, this);
 			}
 			
@@ -50,8 +52,9 @@ public class RoomMaintenance_MESLocators {
 			@FindBy(xpath="(//table[@class='panelGridB']//span[@class=\"ui-button-text ui-c\"])[1]")
 			public WebElement AddRoomDetails;
 			
-			@FindBy(xpath="(//span[@class='ui-icon ui-icon-triangle-1-s ui-c'])[1]")
+			@FindBy(id="roomDialogForm:j_idt112_label")
 			public WebElement BlockCode;
+			
 			
 //			@FindBy()
 //			public WebElement aaa;

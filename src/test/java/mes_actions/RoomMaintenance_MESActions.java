@@ -46,6 +46,8 @@ public class RoomMaintenance_MESActions {
 			public void SelectBlockCode(String BlockCode) throws InterruptedException {
 				BaseClass.selectDropdown(roommaintenance_meslocators.roommaintenancetab.roomdetails.BlockCode, BlockCode);
 				
+				//roommaintenance_meslocators.roommaintenancetab.roomdetails.BlockCode.click();
+				
 			}
 			
 		}//RommDetails
