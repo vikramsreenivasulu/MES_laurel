@@ -44,15 +44,25 @@ public class RoomMaintenance_TestCases {
 		roommaintenance_mesactions.menu.ClickMenuButton();
 		roommaintenance_mesactions.roommaintenancetab.ClickRoomMaintenanceTab();
 		roommaintenance_mesactions.roommaintenancetab.roomdetails.ClickRoomDetails();
+		Report.logInfo("Entered RoomDetails");
 		roommaintenance_mesactions.roommaintenancetab.roomdetails.AddRommDetails();
 		roommaintenance_mesactions.roommaintenancetab.roomdetails.SelectBlockCode("BLK001");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.EnterRoomCode("RM001");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.EnterRoomName("Raw material Storage");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.EnterRoomArea("120");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.SelectUsageType("WHM");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.EnterDiscription("raw material storage room for incoming materials");
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.saveOrCancel();
+		roommaintenance_mesactions.roommaintenancetab.roomdetails.VerifyRoomDetails();
+	
+		
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void AfterMethod(ITestResult result) {
 
 		Report.getResult(result);
-		 //BaseClass.StopDriver();
+		 BaseClass.StopDriver();
 	}
 
 	@AfterSuite

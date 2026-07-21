@@ -93,7 +93,7 @@ public class PlantInformation_MESLocators {
 			@FindBy(xpath = "//button[@name='plantDialogForm:j_idt362']//span[1]")
 			public WebElement CancelButton;
 
-			@FindBy(xpath = "//span[text()='Please enter unique plant code.']")
+			@FindBy(xpath = "//span[text()='Please enter unique plant code.']")   
 			public WebElement afterClickingSave;
 		}// AddPlantDetails
 

@@ -42,4 +42,14 @@ public class Verify {
 		softAssert.assertTrue(condition);
 	}
 
+	public static void verifyTrue(boolean condition,String msg) {
+		if (condition) {
+			System.out.println("Condition is True - Passed");
+		} else {
+			System.out.println("Condition is False - Failed");
+		}
+
+		softAssert.assertTrue(condition,msg);
+	}
+
 }// Verify

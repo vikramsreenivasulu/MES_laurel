@@ -55,9 +55,32 @@ public class RoomMaintenance_MESLocators {
 			@FindBy(id="roomDialogForm:j_idt112_label")
 			public WebElement BlockCode;
 			
+			@FindBy(id="roomDialogForm:j_idt121")
+			public WebElement RoomCode;
 			
-//			@FindBy()
-//			public WebElement aaa;
+			@FindBy(id="roomDialogForm:j_idt129")
+			public WebElement RoomName;
+			
+			@FindBy(id="roomDialogForm:roomArea_input")
+			public WebElement RoomArea;
+			
+			@FindBy(id="roomDialogForm:usageTyp_label")
+			public WebElement UsageType;
+			
+			@FindBy(id="roomDialogForm:j_idt162")
+			public WebElement Description;
+			
+			@FindBy(id="roomDialogForm:saveroomDetailsBtn")
+			public WebElement SaveButton;
+			
+			@FindBy(id="roomDialogForm:j_idt165")
+			public WebElement CancelButton;
+			
+			@FindBy(xpath = "//span[text()='Please enter unique room code.']") 
+			public WebElement afterClickingSave;
+			
+			@FindBy(xpath="//span[@class='ui-growl-title']")
+			public WebElement Gettext;
 			
 		}//RoomDetails
 		
